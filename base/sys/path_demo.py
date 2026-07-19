@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys
 
 # Показываем первые 3 пути
