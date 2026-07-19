@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
-# sys.argv[0] — имя скрипта
+# ./argv_demo.py sys.argv[1] sys.argv[2] ... sys.argv[N]
+# ./argv_demo.py Andrey Vorobev ... 24
+
+# sys.argv[0] — имя скрипта argv_demo.py
 # sys.argv[1] — первый аргумент
 # sys.argv[2] — второй аргумент
 # sys.argv[N] — N аргумент

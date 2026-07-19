@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# sys.exit(1) - Ошибка!
+# sys.exit(1) - Ошибка! 
 # sys.exit(0) - Успех!
 
 import sys

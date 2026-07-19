@@ -4,9 +4,8 @@ import sys
 
 # Показываем первые 3 пути
 print("Python ищет модули в:")
-for p in sys.path[:3]:
+for p in sys.path[:4]:
     print(f"  • {p}")
 
-# Добавляем свою папку
-sys.path.append('/opt/my_libs')
+# Отображаем общее кл-во
 print(f"\nВсего путей: {len(sys.path)}")
