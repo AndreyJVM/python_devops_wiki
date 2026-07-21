@@ -1,17 +1,28 @@
 #!/usr/bin/env python3
 
+# ./stdout_demo.py
+# sys.stdout — куда пишутся логи
+# sys.stderr — отдельный поток для ошибок
+
 import sys
 
-print("Это в терминале")
+print("Это в консоли")
 
-# Сохраняем оригинал
+# Сохраняем и перенаправляем stdout в файл
 original = sys.stdout
+sys.stdout = open("log.txt", "w")
 
-# Пишем в файл
-sys.stdout = open('log.txt', 'w')
-print("Это в логе")
-print("Это в логе 1")
-print("Это в логе 2")
-sys.stdout = original  # Восстанавливаем
+print("Это в файле log.txt")
+print("Тоже в файле")
 
-print("И это в терминале")
+# Восстанавливаем stdout
+sys.stdout = original
+
+print("Снова в консоли")
+
+# Показываем содержимое лога
+with open("log.txt", "r") as f:
+    print(f"\nСодержимое log.txt:\n{f.read()}")
+
+# stderr — для ошибок
+print("Это ошибка", file=sys.stderr)

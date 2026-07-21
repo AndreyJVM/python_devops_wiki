@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
 
-# ./argv_demo.py sys.argv[1] sys.argv[2] ... sys.argv[N]
-# ./argv_demo.py Andrey Vorobev ... 24
-
-# sys.argv[0] — имя скрипта argv_demo.py
+# ./argv_demo.py Andrey 25
+# sys.argv[0] — имя скрипта
 # sys.argv[1] — первый аргумент
-# sys.argv[2] — второй аргумент
-# sys.argv[N] — N аргумент
+# sys.argv[N] — N-й аргумент
 
 import sys
 
-print(f"Скрипт: {sys.argv[0]}")
+if len(sys.argv) < 2:
+    print(f"Использование: {sys.argv[0]} <имя> [возраст]")
+    sys.exit(1)
 
-name = sys.argv[1] if len(sys.argv) > 1 else "мир"
-print(f"Привет, {name}!")
+name = sys.argv[1]
+age = sys.argv[2] if len(sys.argv) > 2 else "не указан"
+
+print(f"Скрипт: {sys.argv[0]}")
+print(f"Имя: {name}")
+print(f"Возраст: {age}")
