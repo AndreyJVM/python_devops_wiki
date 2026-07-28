@@ -12,7 +12,7 @@ if len(sys.argv) < 2:
     sys.exit(1)
 
 name = sys.argv[1]
-age = sys.argv[2] if len(sys.argv) > 2 else "не указан"
+age = sys.argv[2]
 
 print(f"Скрипт: {sys.argv[0]}")
 print(f"Имя: {name}")
