@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 
 # ./exit_demo.py production
-# sys.exit(0) — успех (CI/CD продолжает)
-# sys.exit(45) — ошибка (CI/CD останавливает)
+# sys.exit(0) - успех 
+# sys.exit(7) - ошибка: не указана среда
+# sys.exit(45) - ошибка: неизвестная среда
 
 import sys
 
 if len(sys.argv) < 2:
     print("Ошибка: не указана среда")
-    print(f"Использование: {sys.argv[0]} <production|staging>")
-    sys.exit(1)
+    print(f"Использование: {sys.argv[0]} <production|test>")
+    sys.exit(7)
 
 env = sys.argv[1]
 
@@ -21,4 +22,4 @@ elif env == "test":
     sys.exit(0)
 else:
     print(f"Ошибка: неизвестная среда {env}")
-    sys.exit(1)
+    sys.exit(45)

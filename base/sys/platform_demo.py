@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 # ./platform_demo.py
-# sys.platform — определяет ОС (linux, darwin, win32)
-# sys.version_info — версия Python (major, minor, micro)
+# sys.platform - определяет ОС (linux, darwin, win32)
+# sys.version_info - версия Python (major, minor, micro)
 #
 # Зачем в DevOps:
 #   • Выбор правильных команд для ОС (ls vs dir)

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 # ./stdout_demo.py
-# sys.stdout — куда пишутся логи
-# sys.stderr — отдельный поток для ошибок
+# sys.stdout - куда пишутся логи
+# sys.stderr - отдельный поток для ошибок
 
 import sys
 
