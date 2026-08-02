@@ -6,8 +6,8 @@
 
 import sys
 
-print("Это в консоли")
-
+print("[info: Это в консоли]")
+print("[Записываю логи приложения в файл...]")
 # Сохраняем и перенаправляем stdout в файл
 original = sys.stdout
 sys.stdout = open("log.txt", "w")
@@ -15,14 +15,11 @@ sys.stdout = open("log.txt", "w")
 print("Это в файле log.txt")
 print("Тоже в файле")
 
-# Восстанавливаем stdout
+# Восстанавливаем stdout в консоль
 sys.stdout = original
 
-print("Снова в консоли")
-
-# Показываем содержимое лога
-with open("log.txt", "r") as f:
-    print(f"\nСодержимое log.txt:\n{f.read()}")
+print("[Конец записи логов...]")
+print("[info: вывод в консоли]")
 
 # stderr — для ошибок
-print("Это ошибка", file=sys.stderr)
+print("[Это ошибка]", file=sys.stderr)
